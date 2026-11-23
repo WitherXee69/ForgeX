@@ -225,3 +225,4 @@ __marimo__/
 /.linx_venv/
 /.vscode/
 .idea/
+!/forgex.zip

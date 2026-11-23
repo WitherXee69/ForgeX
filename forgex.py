@@ -1,8 +1,8 @@
 import os
 import shutil
 
-from core.englne import Engine
-from core.handlers.repo import Fetcher
+from core.engine import Engine
+from core.handlers.repo.fetcher import Fetcher
 from core.context import Context
 
 from config.settings import Settings
