@@ -1,0 +1,37 @@
+forgex/
+│
+├── forgex/                # Main package
+│   ├── __init__.py
+│   │
+│   ├── cli/              # CLI entry + commands
+│   │   ├── __init__.py
+│   │   └── main.py       # forgex install ...
+│   │
+│   ├── core/             # Core logic (brain)
+│   │   ├── __init__.py
+│   │   ├── resolver.py   # decides how to install
+│   │   ├── installer.py  # executes install
+│   │   └── fetcher.py    # talks to GitHub API
+│   │
+│   ├── models/           # data structures
+│   │   ├── __init__.py
+│   │   └── repo.py       # repo object (name, url, etc.)
+│   │
+│   ├── utils/            # helper functions
+│   │   ├── __init__.py
+│   │   ├── logger.py     # logging (maybe Rich later)
+│   │   └── system.py     # OS/path helpers
+│   │
+│   ├── config/           # configuration handling
+│   │   ├── __init__.py
+│   │   └── settings.py   # paths, defaults
+│   │
+│   └── registry/         # track installed apps (later)
+│       ├── __init__.py
+│       └── local_db.py
+│
+├── tests/                # (optional for now)
+│
+├── pyproject.toml        # project config
+├── README.md
+└── main.py               # entry point (optional shortcut)
