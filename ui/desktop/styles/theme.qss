@@ -1,0 +1,168 @@
+* {
+    color: #e2e9ff;
+    font-family: "Segoe UI", "Arial";
+    font-size: 11pt;
+}
+QMainWindow, QWidget#AppRoot { background: #070b18; }
+QWidget { background: transparent; }
+QWidget#TitleBar {
+    background: #090e20;
+    border: 1px solid #5141a7;
+    border-bottom: 1px solid #25345f;
+}
+QLabel#WindowTitle { color: #c7d5ff; font-family: "Consolas"; font-size: 10pt; }
+QPushButton#MinButton, QPushButton#MaxButton, QPushButton#CloseButton {
+    background: #172344; border: 1px solid #344675; border-radius: 4px;
+    color: #ffffff; font-family: "Segoe UI Symbol", "Segoe UI"; font-size: 15pt;
+    font-weight: 600; padding: 0;
+}
+QPushButton#MinButton:hover, QPushButton#MaxButton:hover {
+    background: #293d70; border-color: #7089cf;
+}
+QPushButton#CloseButton { background: #51243a; border-color: #87415f; }
+QPushButton#CloseButton:hover { background: #c43d63; border-color: #ed7896; color: white; }
+
+QFrame#Sidebar { background: #090f20; border-right: 1px solid #263b70; }
+QLabel#SidebarLogo { color: #9368ff; font-size: 39pt; font-weight: 900; }
+QLabel#SidebarBrand { color: #edf0ff; font-size: 23pt; font-weight: 800; letter-spacing: 2px; }
+QLabel#SidebarTagline { color: #7f91c8; font-family: "Consolas"; font-size: 8pt; letter-spacing: 1.5px; }
+QFrame#SidebarFooterPanel { background: #0d1730; border: 1px solid #263b70; border-radius: 9px; }
+QLabel#SidebarVersion { color: #b8a0ff; font-size: 9pt; font-weight: 700; }
+QLabel#SidebarFooter { color: #91a0d0; font-size: 9pt; }
+
+QListWidget#NavigationList, QListWidget#SettingsNavigation {
+    background: transparent; border: 0; outline: 0; padding: 5px;
+}
+QListWidget#NavigationList::item {
+    padding: 16px 14px; margin: 4px 0; border-radius: 8px;
+    color: #b5c3f0; font-size: 12pt; min-height: 24px;
+}
+QListWidget#NavigationList::item:hover { background: #141d3c; color: white; }
+QListWidget#NavigationList::item:selected {
+    background: #29166d; color: #ffffff; border-left: 4px solid #a17aff;
+}
+QLabel#ConnectionBar {
+    background: #0b1426; border-bottom: 1px solid #263b70;
+    color: #80e6a0; padding: 13px 22px;
+    font-family: "Consolas"; font-size: 10pt;
+}
+
+QLabel#DashboardTitle { color: #b99aff; font-size: 38pt; font-weight: 800; letter-spacing: 2px; }
+QLabel#PageHeading { color: #edf0ff; font-size: 25pt; font-weight: 750; }
+QLabel#PageSubtitle { color: #9eaddb; font-size: 11pt; }
+QLabel#WelcomeText { color: #b9c7f5; font-family: "Consolas"; font-size: 10pt; }
+QLabel#MutedText { color: #aab8e2; font-size: 10.5pt; }
+QLabel#HintText { color: #9aa9d7; font-size: 9.5pt; }
+QLabel#HeroMark { color: #8955ff; font-size: 70pt; font-weight: 900; }
+QLabel#HeroName { color: #e4eaff; font-size: 46pt; font-weight: 800; letter-spacing: 3px; }
+QLabel#HeroTagline { color: #bdcaff; font-size: 11pt; letter-spacing: 2px; }
+QLabel#HeroSub, QLabel#HeroQuote { color: #a5b6ef; font-family: "Consolas"; font-size: 11pt; }
+QLabel#HeroQuote { font-style: italic; }
+QFrame#LoginHero {
+    border: 1px solid #5947b9; border-radius: 12px;
+    background: qradialgradient(cx:0.5, cy:0.25, radius:1.1, fx:0.5, fy:0.25,
+    stop:0 #20205a, stop:0.48 #101631, stop:1 #080d1d);
+}
+QFrame#LoginPanel { background: rgba(8, 14, 31, 235); border: 1px solid #8a6cff; border-radius: 10px; }
+QLabel#DividerLabel, QLabel#SectionLabel {
+    color: #9baadd; font-family: "Consolas"; font-size: 9pt; letter-spacing: 1px;
+}
+QLabel#PanelHeading, QLabel#CardHeading { color: #e2eaff; font-size: 17pt; font-weight: 650; }
+QLabel#DetailTitle { color: #f0f2ff; font-size: 23pt; font-weight: 750; }
+QLabel#DetailDescription { color: #c0cbed; font-size: 12pt; line-height: 1.4; }
+QLabel#MetadataText { color: #c0caff; font-family: "Consolas"; font-size: 10pt; }
+QLabel#TagText { color: #c3a5ff; font-size: 10pt; }
+QLabel#InfoValue { color: #d6defe; font-size: 11pt; }
+QLabel#ActivityLine { color: #c7d4f8; font-family: "Consolas"; padding: 7px 2px; font-size: 10pt; }
+
+QFrame#Panel, QFrame#DetailPanel, QFrame#SearchToolbar, QFrame#InfoInset {
+    background: #0c1428; border: 1px solid #294477; border-radius: 10px;
+}
+QFrame#InfoInset { background: #0a1123; border-color: #263c70; }
+QPushButton {
+    background: #111b38; border: 1px solid #354b88; border-radius: 7px;
+    padding: 11px 17px; color: #e3eaff; font-size: 10.5pt;
+}
+QPushButton:hover { background: #1b2853; border-color: #8667ff; }
+QPushButton:pressed { background: #2b176c; }
+QPushButton#PrimaryButton {
+    background: qlineargradient(x1:0,y1:0,x2:1,y2:1, stop:0 #5525c7, stop:1 #32128d);
+    border: 1px solid #a17aff; color: white; font-weight: 700; padding: 13px 20px;
+}
+QPushButton#PrimaryButton:hover { background: #6838df; border-color: #c0a7ff; }
+QPushButton#SecondaryButton { background: #111a34; border: 1px solid #596da9; }
+QPushButton#DangerButton { background: #35162d; border-color: #a54470; color: #ffc4d9; }
+QPushButton#TextButton { background: transparent; border: 0; color: #b8a2ff; }
+QPushButton#ActionCard {
+    min-height: 92px; background: #101a34; border: 1px solid #2b3b70;
+    font-size: 12pt; font-weight: 600;
+}
+QLineEdit#HomeSearchInput { min-height: 28px; }
+QPushButton#HomeSearchButton {
+    background: qlineargradient(x1:0,y1:0,x2:1,y2:1, stop:0 #5525c7, stop:1 #32128d);
+    border: 1px solid #a17aff; border-radius: 7px; color: white;
+    font-weight: 700; padding: 7px 10px;
+}
+QPushButton#HomeSearchButton:hover { background: #6838df; border-color: #c0a7ff; }
+
+QLineEdit {
+    background: #080f20; border: 1px solid #40558f; border-radius: 7px;
+    padding: 13px 15px; selection-background-color: #6336c8; color: #e6ecff;
+    font-size: 11pt; min-height: 22px;
+}
+QLineEdit:focus { border: 1px solid #a88aff; }
+QCheckBox { color: #c1ccef; spacing: 10px; font-size: 10.5pt; }
+QCheckBox::indicator { width: 18px; height: 18px; }
+QCheckBox::indicator:unchecked { border: 1px solid #6378b7; background: #0b1225; border-radius: 4px; }
+QCheckBox::indicator:checked { border: 1px solid #a887ff; background: #7040dc; border-radius: 4px; }
+
+QListWidget#RepositoryList {
+    background: #0a1122; border: 1px solid #263c70; border-radius: 8px; padding: 7px;
+}
+QListWidget#RepositoryList::item {
+    padding: 18px 15px; margin: 3px 1px; border-bottom: 1px solid #1b294d;
+    border-radius: 7px; min-height: 68px; color: #dce5ff; font-size: 11pt;
+}
+QListWidget#RepositoryList::item:selected { background: #2b1769; border: 1px solid #8864f5; }
+QListWidget#RepositoryList::item:hover { background: #172344; }
+QSplitter::handle { background: #27375f; width: 3px; }
+
+QTabWidget::pane { border: 1px solid #293e70; background: #0b1326; border-radius: 7px; }
+QTabBar::tab {
+    background: #101a34; border: 1px solid #263b6c; padding: 12px 20px;
+    margin-right: 4px; color: #b9c6f1; font-size: 10.5pt;
+}
+QTabBar::tab:selected { background: #351b82; color: white; border-color: #8d6aff; }
+QTextBrowser#ReadmeView { background: #0b1326; border: 0; padding: 16px; color: #d6e0ff; font-size: 11pt; }
+QTextEdit#LogConsole {
+    background: #050a15; border: 1px solid #263b70; border-radius: 7px;
+    color: #8fe7b1; font-family: Consolas; font-size: 10pt; padding: 14px;
+}
+QProgressBar {
+    background: #080f20; border: 1px solid #4a3b91; border-radius: 6px;
+    height: 20px; text-align: center; color: #e7e0ff; font-size: 10pt;
+}
+QProgressBar::chunk {
+    background: qlineargradient(x1:0,y1:0,x2:1,y2:0, stop:0 #4e27bc, stop:1 #9b61ff);
+    border-radius: 5px;
+}
+QComboBox {
+    background: #0a1226; border: 1px solid #40538e; border-radius: 6px;
+    padding: 11px 13px; min-height: 22px; font-size: 11pt;
+}
+QComboBox QAbstractItemView { background: #101a34; selection-background-color: #45229a; }
+QListWidget#SettingsNavigation::item {
+    padding: 15px 13px; margin: 3px 0; border-radius: 7px;
+    color: #b8c5ee; font-size: 11pt; min-height: 22px;
+}
+QListWidget#SettingsNavigation::item:selected {
+    background: #2b1769; color: white; border-left: 3px solid #a17aff;
+}
+QFrame#SettingsBrandPanel {
+    background: #0b1225; border: 1px solid #263b70; border-radius: 10px;
+}
+QLabel#SettingsBrandMark { color: #8955ff; font-size: 54pt; font-weight: 900; }
+QLabel#SettingsBrandName { color: #edf0ff; font-size: 22pt; font-weight: 800; }
+QScrollBar:vertical { background: #080f20; width: 12px; margin: 0; }
+QScrollBar::handle:vertical { background: #3e347a; border-radius: 5px; min-height: 28px; }
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical { height: 0; }
