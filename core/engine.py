@@ -1,3 +1,4 @@
+from core.handlers.repo.fetcher import Fetcher
 from core.parser import parse_input
 
 class Engine:
@@ -6,6 +7,10 @@ class Engine:
         self.fetcher = fetcher
         #self.resolver = resolver
         #self.installer = installer
+
+    @property
+    def last_error(self):
+        return self.fetcher.last_error
 
     @staticmethod
     def _repository_summary(repo):
@@ -40,3 +45,12 @@ class Engine:
             if not isinstance(repo_items, list):
                 return []
             return [self._repository_summary(item) for item in repo_items]
+
+    def individual_repo_handler(self, repository):
+        owner, repo = parse_input(repository.get("full_name", ""))
+
+        #This is temporary as this method will later parse all the data on user selected repo(ex. dependencies, and such)
+        readme = self.fetcher.fetch_readme(owner, repo)
+        if isinstance(readme, str):
+            return readme
+        return ""

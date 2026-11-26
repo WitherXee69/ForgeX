@@ -1,15 +1,5 @@
-"""UI/backend boundary.
-
-Replace the demo methods here with calls into ForgeX's real backend. Keep network
-work off the GUI thread (QThreadPool/QRunnable or a worker QObject) and emit
-signals back to the UI. The widgets intentionally know nothing about requests,
-GitHub headers, recipe parsing, or installation internals.
-"""
 from __future__ import annotations
-
 from PySide6.QtCore import QObject, Signal, QTimer
-
-from core.engine import Engine
 
 
 class ForgeXController(QObject):
@@ -45,8 +35,8 @@ class ForgeXController(QObject):
 
     def search_repositories(self, query: str) -> None:
         results = self.engine.handler(query)
-        if self.engine.fetcher.last_error:
-            self.error_occurred.emit(self.engine.fetcher.last_error)
+        if self.engine.last_error:
+            self.error_occurred.emit(self.engine.last_error)
         if isinstance(results, dict):
             if results:
                 self.repository_loaded.emit(results)
@@ -55,8 +45,9 @@ class ForgeXController(QObject):
         else:
             self.search_finished.emit(results)
 
-    def load_repository(self, repository: dict) -> None:
-        self.repository_loaded.emit(repository)
+    def load_repository(self, repository: dict):
+        return self.engine.individual_repo_handler(repository)
+        #self.repository_loaded.emit(repository, "")
 
     def install_repository(self, repository: dict) -> None:
         """Demo progress only. Replace with the real installer worker."""

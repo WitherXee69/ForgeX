@@ -116,3 +116,16 @@ class Fetcher:
             return None
         except requests.ConnectionError:
             return self._fail(self.exception_handler.exception_no_internet_connection())
+
+    def fetch_readme(self, owner, repo):
+        try:
+            url = f"https://api.github.com/repos/{owner}/{repo}/readme"
+            headers = dict(self.headers)
+            headers["Accept"] = "application/vnd.github.raw+json"
+            response = requests.get(url, headers=headers)
+            #print(response.text)
+            if self.validator(response):
+                return response.text
+            return None
+        except requests.ConnectionError:
+            return self._fail(self.exception_handler.exception_no_internet_connection())

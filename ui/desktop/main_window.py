@@ -203,7 +203,8 @@ class MainWindow(QMainWindow):
 
     def _open_repository(self, repository):
         self.current_repository = repository
-        self.repository_page.set_repository(repository)
+        self.readme = self.backend.load_repository(repository)
+        self.repository_page.set_repository(repository, self.readme)
         self.content_stack.setCurrentWidget(self.repository_page)
 
     def _start_install(self, repository):

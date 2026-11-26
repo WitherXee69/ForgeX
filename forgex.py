@@ -14,6 +14,7 @@ from core.context import Context
 from core.engine import Engine
 from core.handlers.exceptions.exceptions import FX_ExceptionHandler
 from core.handlers.repo.fetcher import Fetcher
+
 from config.settings import Settings
 
 from ui.desktop.controller.forgeController import ForgeXController
